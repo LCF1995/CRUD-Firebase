@@ -3,7 +3,7 @@ package com.example.luciana.crudfirebase.model;
 import com.example.luciana.crudfirebase.config.ConfiguracaoFirebase;
 import com.google.firebase.database.DatabaseReference;
 
-public class Usuario {
+public class Autor {
 
     private String id;
     private String nome;
@@ -14,8 +14,7 @@ public class Usuario {
     private String email;
     private String senha;
 
-    public Usuario(){
-
+    public Autor() {
     }
 
     public void salvar(){

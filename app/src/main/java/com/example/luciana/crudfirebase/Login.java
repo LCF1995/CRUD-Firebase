@@ -38,7 +38,7 @@ public class Login extends AppCompatActivity {
         verificarUsuarioLogado();
 
         email = findViewById(R.id.editEmail);
-        senha = findViewById(R.id.editSenha);
+        senha = findViewById(R.id.editSenhaCadastro);
         btLogin = findViewById(R.id.btLogin);
 
         btLogin.setOnClickListener(new View.OnClickListener() {
@@ -55,6 +55,16 @@ public class Login extends AppCompatActivity {
                 validarLogin();
 
             }
+
+            }
+        });
+
+        findViewById(R.id.textView2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(Login.this, CadastrarAutor.class);
+                startActivity(intent);
 
             }
         });
@@ -115,9 +125,9 @@ public class Login extends AppCompatActivity {
         }
     }
 
-    public void abrirCadastro(View v){
+    public void abrirCadastro(){
 
-        Intent intent = new Intent(Login.this, Cadastro.class);
+        Intent intent = new Intent(Login.this, CadastrarAutor.class);
         startActivity(intent);
 
     }
